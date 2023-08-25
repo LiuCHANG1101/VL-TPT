@@ -22,8 +22,11 @@ pre_train.py
 save.py
 T5_network.py
 
+
 YARR/
 
+# 数据
+scripts/
 data/
 
 
