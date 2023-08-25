@@ -1,0 +1,38 @@
+method:
+    name: "PERACT_BC"
+
+rlbench:
+    task_name: "multi"
+    tasks: [open_drawer]
+    demo_path: /home/liuchang/projects/peract-main/data/val
+    episode_length: 25
+    cameras: [front,left_shoulder,right_shoulder,wrist]
+    camera_resolution: [128, 128]
+    scene_bounds: [-0.3, -0.5, 0.6, 0.7, 0.5, 1.6]
+    include_lang_goal_in_obs: True
+    time_in_state: True
+    headless: True
+
+framework:
+    tensorboard_logging: True
+    csv_logging: True
+    gpu: 0
+    logdir: '/home/liuchang/projects/peract-main/ckpts'
+    start_seed: 0
+    record_every_n: 5
+
+    eval_envs: 1
+    eval_from_eps_number: 0
+    eval_episodes: 10
+    eval_type: 'last' # or 'best'
+    eval_save_metrics: True
+    use_low_lang: True
+    prompt: True
+    bounds_offset: 0.15
+
+cinematic_recorder:
+    enabled: False
+    camera_resolution: [1280, 720]
+    fps: 30
+    rotate_speed: 0.005
+    save_path: '/tmp/videos/'

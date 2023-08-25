@@ -1,0 +1,31 @@
+# 忽略配置文件
+.vscode/
+.idea/
+__pycache__/
+
+# 忽略运行输出
+logs_lowlangwithprompt/
+logs_lowlang/
+logs_highlang/
+logs_pretrain/
+logs_vlm/
+outputs/
+snap/
+eval_data.csv
+ckpts/
+
+#忽略预训练相关
+pretrain/
+episode.json
+get_demo_pkl.py
+pre_train.py
+save.py
+T5_network.py
+
+YARR/
+
+data/
+
+
+
+

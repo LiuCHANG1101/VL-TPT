@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=2 xvfb-run python eval.py \
+    rlbench.tasks=[put_item_in_drawer] \
+    rlbench.task_name='10_demos_new_task' \
+    rlbench.demo_path=/home/liuchang/projects/peract-main/data/test \
+    framework.logdir=/home/liuchang/projects/peract-main/logs_lowlangwithprompt \
+    framework.csv_logging=True \
+    framework.tensorboard_logging=False \
+    framework.eval_envs=1 \
+    framework.start_seed=2 \
+    framework.eval_from_eps_number=0 \
+    framework.eval_episodes=25 \
+    framework.eval_type='missing' \
+    framework.use_low_lang=False \
+    framework.prompt=False \
+    rlbench.headless=True
